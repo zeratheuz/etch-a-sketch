@@ -5,7 +5,9 @@ for (let i = 0; i < 256; i++) {
   container.appendChild(div)
 }
 
-const pixel = document.querySelector('.pixel')
+const pixels = document.querySelectorAll('.pixel')
+pixels.forEach((pixel) => {
   pixel.addEventListener("mouseenter", (e) => {
-  pixel.setAttribute("class", "color")
-})
+    pixel.setAttribute("class", "color")
+  })
+} )
