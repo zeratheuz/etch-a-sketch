@@ -11,10 +11,20 @@ body {
 }
 
 div {
-  border: 5px solid black;
+  height: 4vmin;
+  width: 4vmin;
+  background-color: gray;
+}
+
+div.color {
+  background-color: blueviolet;
 }
 
 div.container {
-  height: 500px;
-  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 64vmin;
+  width: 64vmin;
+  background-color: white;
+  border: 5px solid black;
 }
