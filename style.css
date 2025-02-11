@@ -1,14 +1,16 @@
 body {
   margin: 0px;
   padding: 0px;
-  text-align: center;
+  height: 100vh;
   display: flex;
+  text-align: center;
   align-items: center;
   align-content: center;
-  justify-content: center;
   box-sizing: border-box;
-  height: 100vh;
   flex-direction: column;
+  justify-content: center;
+  background-color: lightgray;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
@@ -16,17 +18,20 @@ button {
   padding: 1vmin;
   border: 2px solid black;
   background-color: cornflowerblue;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+  background-color: lightblue;
 }
 
 div {
   height: 4vmin;
   width: 4vmin;
-  background-color: gray;
+  background-color: white;
 }
 
 div.color {
-  background-color: blueviolet;
+  background-color: black;
 }
 
 div.container {
@@ -34,6 +39,9 @@ div.container {
   flex-wrap: wrap;
   height: 64vmin;
   width: 64vmin;
-  background-color: white;
   border: 5px solid black;
+}
+
+p {
+  background-color: rgb(23, 65, 32);
 }
