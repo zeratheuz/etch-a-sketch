@@ -24,7 +24,7 @@ function addPixels(num) {
       pixel.setAttribute("style", `
         width: ${size}vmin;
         height: ${size}vmin;
-        background-color: black 
+        background-color: ${randomColor()} 
         `)
     })
   })
@@ -32,10 +32,14 @@ function addPixels(num) {
 
 function removePixels() {
   const pixels = Array.from(document.querySelectorAll(".pixel"))
-  // const colors = Array.from(document.querySelectorAll(".color"))
-  // const divs = pixels.concat(colors) 
   const divs = pixels 
   divs.forEach((div) => {
     div.remove()
   })
+}
+
+function randomColor() {
+  const rgb = `rgb(${(Math.random() * 255)}, ${(Math.random() * 255)}, ${(Math.random() * 255)})`
+  console.log(rgb)
+  return rgb
 }
