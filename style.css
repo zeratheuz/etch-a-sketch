@@ -24,24 +24,10 @@ button:hover {
   background-color: lightblue;
 }
 
-div {
-  height: 4vmin;
-  width: 4vmin;
-  background-color: white;
-}
-
-div.color {
-  background-color: black;
-}
-
 div.container {
   display: flex;
   flex-wrap: wrap;
   height: 64vmin;
   width: 64vmin;
   border: 5px solid black;
-}
-
-p {
-  background-color: rgb(23, 65, 32);
 }

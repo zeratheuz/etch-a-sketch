@@ -15,16 +15,18 @@ function addPixels(num) {
     const container = document.querySelector('.container')
     const div = document.createElement('div')
     div.setAttribute("class", 'pixel')
-    div.setAttribute("style", `height: ${size}vmin; width: ${size}vmin;`)
+    div.setAttribute("style", `height: ${size}vmin; width: ${size}vmin; background-color: white`)
     container.appendChild(div)
   }
   const pixels = document.querySelectorAll('.pixel')
   pixels.forEach((pixel) => {
-    pixel.addEventListener("mouseenter", (e) => {
+    let opacity = 10
+    pixel.addEventListener("mouseenter", () => {
+      if (opacity < 100) {opacity += 10}
       pixel.setAttribute("style", `
         width: ${size}vmin;
         height: ${size}vmin;
-        background-color: ${randomColor()} 
+        background-color: ${randomColor(opacity)} 
         `)
     })
   })
@@ -38,8 +40,7 @@ function removePixels() {
   })
 }
 
-function randomColor() {
-  const rgb = `rgb(${(Math.random() * 255)}, ${(Math.random() * 255)}, ${(Math.random() * 255)})`
-  console.log(rgb)
+function randomColor(opacity) {
+  const rgb = `rgba(${(Math.random() * 255)}, ${(Math.random() * 255)}, ${(Math.random() * 255)}, ${opacity}%)`
   return rgb
 }
