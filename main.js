@@ -3,7 +3,9 @@ addPixels(pixelsNumber)
 const button = document.querySelector(".pixelsNumber")
 button.addEventListener("click", () => {
   removePixels()
-  pixelsNumber = prompt("How many pixels do you want?")
+  do { 
+    pixelsNumber = prompt("How many pixels do you want?")
+  } while (pixelsNumber > 100)
   addPixels(pixelsNumber)
 })
 
